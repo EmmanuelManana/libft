@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 17:26:10 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/21 11:54:45 by emanana          ###   ########.fr       */
+/*   Created: 2019/05/21 12:27:10 by emanana           #+#    #+#             */
+/*   Updated: 2019/05/21 12:41:10 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_tolower(int c)
+char		*ft_strcpy(char *dst, const char *src)
 {
-	if (c >= 65 && 90 <= c)
-		c = c + 32;
-	return (c);
+	int i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	dst[i] = '\0';
+	return (dst);
 }
