@@ -5,31 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 12:21:59 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/20 16:39:42 by emanana          ###   ########.fr       */
+/*   Created: 2019/05/21 14:56:57 by emanana           #+#    #+#             */
+/*   Updated: 2019/05/21 16:26:26 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(char *str)
+int			ft_atoi(const char *str)
 {
 	int res;
 	int sign;
 	int i;
 
 	sign = 1;
-	i = 0;
 	res = 0;
-	while (str[i] && 
-			(str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\f' || str[i] == '\v'))
+	i = 0;
+	if ((str[i] >= 9 && 13 >= str[i]) || str[i] == 32)
 		i++;
-	if (*str++ == '-')
-		sign = -1 * sign;
-	if (*str == '-' || *str == '+')
-		str++;
-	while (str[i] && (str[i] >= '0' && str[i] <= '9'))
-		res = (res * 10) + (str[i] - '0');
+	if (str[i] == 45 || str[i] == 43)
 		i++;
+	if (str[i] == '-')
+	{
+		sign = -1;
+		i++;
+	}
+	while (str[i] && (str[i] >= 48 && str[i] <= 57))
+	{
+		res = res * 10 + (str[i] - 48);
+		i++;
+	}
 	return (res * sign);
 }
