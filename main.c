@@ -6,16 +6,14 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:52:25 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/21 14:25:09 by emanana          ###   ########.fr       */
+/*   Updated: 2019/05/24 15:32:41 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 int		main(int ac, char **av)
 {
-	printf("%i", ft_isascii(101));
+	ft_putstr(strnstr("needleinahaystack", "ed", 2));
 	return (0);
 }
