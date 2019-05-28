@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:52:25 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/24 15:32:41 by emanana          ###   ########.fr       */
+/*   Updated: 2019/05/28 16:45:09 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int		main(int ac, char **av)
 {
-	ft_putstr(strnstr("needleinahaystack", "ed", 2));
+	const char s2[] ="xx";
+	printf("%s",ft_strstr("life is good", s2));
 	return (0);
 }
