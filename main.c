@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:52:25 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/29 11:41:36 by emanana          ###   ########.fr       */
+/*   Updated: 2019/05/29 11:57:01 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		main(int ac, char **av)
 {
 	const char stuff[20];
 	
-	ft_memset((char*)stuff, 'a', 20);
+	ft_memset((char*)stuff, 'a', 30);
 	puts(stuff);
 	return (0);
 }
