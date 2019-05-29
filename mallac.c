@@ -1,36 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   mallac.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 11:18:57 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/28 16:54:31 by emanana          ###   ########.fr       */
+/*   Created: 2019/05/29 10:57:38 by emanana           #+#    #+#             */
+/*   Updated: 2019/05/29 11:09:28 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-size_t			ft_strlcat(char *dst, const char *src, size_t dstsize)
+int		main()
 {
-	size_t d;
-	size_t s;
-
-	d = 0;
-	s = 0;
-	while (dst[d] && d < dstsize)
-	{
-		d++;
-	}
-	while (src[s] && (d + s + 1) < dstsize)
-	{
-		dst[d + s] = src[s];
-		s++;
-	}
-	if (d != dstsize)
-	{
-		dst[d + s] = '\0';
-	}
-	return (d + (size_t)ft_strlen(src));
+	(int)write(1, "a", 1);
+	return (0);
 }

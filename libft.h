@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:02:13 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/28 15:54:13 by emanana          ###   ########.fr       */
+/*   Updated: 2019/05/28 17:50:16 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int			ft_isalnum(int c);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 void		ft_putchar(char c);
+void		ft_memset(void *b, int c, size_t len);
 void		ft_putnbr(int n);
 void		ft_putstr(char *str);
 int			ft_atoi(const char *str);
