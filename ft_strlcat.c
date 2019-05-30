@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 11:18:57 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/28 16:54:31 by emanana          ###   ########.fr       */
+/*   Updated: 2019/05/30 16:01:09 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ size_t			ft_strlcat(char *dst, const char *src, size_t dstsize)
 	{
 		dst[d + s] = '\0';
 	}
-	return (d + (size_t)ft_strlen(src));
+	return (d + (size_t)ft_strlen(src);
 }

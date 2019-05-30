@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:52:25 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/29 16:04:28 by emanana          ###   ########.fr       */
+/*   Updated: 2019/05/30 15:57:13 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,9 @@
 
 int		main(int ac, char **av)
 {
+	char *p;
+	char str1[150] = "i wonder that this does";
+	p = ft_memchr(str1, 'd', 10);
+	puts(p);
 	return (0);
 }
