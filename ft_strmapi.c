@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmap.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/31 14:38:16 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/31 15:55:22 by emanana          ###   ########.fr       */
+/*   Created: 2019/05/31 15:51:49 by emanana           #+#    #+#             */
+/*   Updated: 2019/05/31 16:43:25 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strmap(char const *s, char (*f)(char))
+char		*ft_strmapi(const char *s, char (*f)(unsigned int, char ))
 {
-	char	*returned;
-	char	*src;
+	int i;
+	char *returned;
+	char *src;
 
+
+	i = 0;
 	src = (char*)s;
-	if (!s || !(returned = ft_memalloc((size_t)ft_strlen((const char*)s) + 1)))
+	returned = ft_memalloc((size_t*)(ft_strlen(s) + 1));
+	if (!s || !*s || !src)
 		return (NULL);
-	while (*src)
-		*(returned++) = f(*(src++));
+	while (src[i])
+	{
+		returned[i] = f(i,src[i]);
+		i++;
+	}
 	return (returned);
-
 }

@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:02:13 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/31 15:06:04 by emanana          ###   ########.fr       */
+/*   Updated: 2019/05/31 16:51:01 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,9 +49,11 @@ void		ft_strclr(char *s);
 void		ft_striter(char *s, void (*f)(char *));
 void		ft_striteri(char *s, void  (*f)(unsigned int, char *));
 char		*ft_strmap(char const *s, char (*f)(char));
+char		*ft_strmapi(char const *s, char (*f)(unsigned int, char)); 
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
 int			ft_strcmp(const char *s1, const char *s2);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
+int			ft_strequ(char const *s1, char const *s2);
 char		*ft_strncpy(char *dst, const char *src, size_t len);
 char		*ft_strcat(char *s1, const char *s2);
 char		*ft_strncat(char *s1, const char *s2, size_t n);

@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:52:25 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/31 14:52:59 by emanana          ###   ########.fr       */
+/*   Updated: 2019/05/31 16:32:48 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,5 @@
 int		main(int ac, char **av)
 {
 	size_t n = 10;
-	char str[10];
-	ft_strnew(n);
-	ft_putstr(str);
 	return (0);
 }
