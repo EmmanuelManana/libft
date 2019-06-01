@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:52:25 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/01 15:10:00 by emanana          ###   ########.fr       */
+/*   Created: 2019/06/01 15:09:18 by emanana           #+#    #+#             */
+/*   Updated: 2019/06/01 15:17:40 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+char		*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	size_t n = 10;
-	int cmp;
-	int cmp1;
+	int i;
 
-	cmp = ft_strnequ("hello", "hello", ft_strlen("hello"));
-	cmp1 = ft_strncmp("hello", "hello", ft_strlen("hello"));
-
-	printf("%i\n", cmp);
-	printf("%i", cmp1);
-	return (0);
+	i = 0;
+	while (src[i] != '\0' && i < n)
+	{
+		dst[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dst[i] = '\0';
+		i++;
+	}
+	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 15:12:17 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/31 11:07:50 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/01 15:25:52 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strdup(const char *s1)
 
 	i = 0;
 	dup = (char*)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if(!dup)
+	if (!dup)
 		return (NULL);
 	while (s1[i])
 	{
