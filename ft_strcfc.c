@@ -1,19 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcfc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/20 09:52:25 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/04 18:02:02 by emanana          ###   ########.fr       */
+/*   Created: 2019/06/04 17:20:34 by emanana           #+#    #+#             */
+/*   Updated: 2019/06/04 18:00:33 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+unsigned int		ft_strcfc(char *str, const char *c)
 {
-	ft_putstr(ft_strtrim("  helollklk lklkl			"));
-	return (0);
+	char			*p;
+	unsigned int	cnt;
+	int				i;
+	unsigned int	tmp;
+
+	p = str;
+	cnt = 0;
+	while (*c)
+	{
+		i = 0;
+		tmp = cnt;
+		while (c[i])
+		{
+			if (c[i++] == *p)
+				cnt++;
+			if (cnt == tmp)
+				return (cnt);
+		}
+		c++;
+	}
+	return (cnt);
 }
