@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcfc.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 17:20:34 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/05 12:32:19 by emanana          ###   ########.fr       */
+/*   Created: 2019/06/05 17:17:14 by emanana           #+#    #+#             */
+/*   Updated: 2019/06/05 17:17:20 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int		ft_strcfc(char *str, const char *c)
+t_list	*ft_lstnew(void const *content, size_t content_size)
 {
-	char			*p;
-	unsigned int	cnt;
-	int				ci;
-	unsigned int	tmp;
+	t_list	*list;
 
-	p = str;
-	cnt = 0;
-	while (*c)
+	if (!(list = (t_list*)ft_memalloc(sizeof(t_list))))
+		return (NULL);
+	if (!content)
 	{
-		ci = 0;
-		tmp = cnt;
-		while (c[ci])
-		{
-			if (c[ci++] == *p)
-				++cnt;
-		}
-		if (cnt == tmp)
-			return (cnt);
-		++p;
+		list->content = NULL;
+		list->content_size = 0;
 	}
-	return (cnt);
+	else
+	{
+		if ((list->content = ft_dup(content, content_size)) == NULL)
+			return (NULL);
+		list->content_size = content_size;
+	}
+	list->next = NULL;
+	return (list);
 }

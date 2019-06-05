@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_lstaddend.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vtouffet <vtouffet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 11:47:57 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/05 13:10:36 by emanana          ###   ########.fr       */
+/*   Created: 2017/08/21 17:04:38 by vtouffet          #+#    #+#             */
+/*   Updated: 2017/11/09 10:48:24 by vtouffet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strncat(char *s1, const char *s2, size_t n)
+void	ft_lstaddend(t_list **alst, t_list *new)
 {
-	size_t	i;
-	int		j;
+	t_list	*ptr;
 
-	j = 0;
-	i = ft_strlen(s1);
-	while (s2[j] != '0' && (size_t)j <= n)
-	{
-		s1[i] = s2[j];
-		i++;
-		++j;
-	}
-	s1[i] = '\0';
-	return (s1);
+	ptr = *alst;
+	while (ptr->next)
+		ptr = ptr->next;
+	ptr->next = new;
 }

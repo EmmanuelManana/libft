@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 15:09:18 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/01 15:17:40 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/05 14:03:20 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ char		*ft_strncpy(char *dst, const char *src, size_t len)
 	int i;
 
 	i = 0;
-	while (src[i] != '\0' && i < n)
+	while (src[i] != '\0' && (size_t)i < len)
 	{
 		dst[i] = src[i];
-		i++;
+		++i;
 	}
-	while (i < n)
+	while ((size_t)i < len)
 	{
 		dst[i] = '\0';
 		i++;

@@ -1,38 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcfc.c                                        :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 17:20:34 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/05 12:32:19 by emanana          ###   ########.fr       */
+/*   Created: 2019/06/05 17:33:45 by emanana           #+#    #+#             */
+/*   Updated: 2019/06/05 17:41:19 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int		ft_strcfc(char *str, const char *c)
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	char			*p;
-	unsigned int	cnt;
-	int				ci;
-	unsigned int	tmp;
+	t_list	*ptr;
+	t_list	*tmp;
 
-	p = str;
-	cnt = 0;
-	while (*c)
+	ptr = *alst;
+	while (ptr)
 	{
-		ci = 0;
-		tmp = cnt;
-		while (c[ci])
-		{
-			if (c[ci++] == *p)
-				++cnt;
-		}
-		if (cnt == tmp)
-			return (cnt);
-		++p;
+		tmp = ptr;
+		ft_lstdelone(&ptr, del);
+		ptr = tmp->next;
 	}
-	return (cnt);
+	*alst = NULL;
 }

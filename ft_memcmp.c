@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 16:22:23 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/01 10:26:03 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/05 13:09:42 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned char		*ps1;
 	unsigned char		*ps2;
-	int					i;
+	size_t					i;
 
 	i = 0;
 	ps1 = (unsigned char*)s1;

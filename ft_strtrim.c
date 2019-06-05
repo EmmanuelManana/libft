@@ -3,32 +3,32 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vtouffet <vtouffet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 14:51:18 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/04 18:02:55 by emanana          ###   ########.fr       */
+/*   Created: 2017/08/19 15:49:42 by vtouffet          #+#    #+#             */
+/*   Updated: 2019/06/05 16:31:34 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strtrim(char const *s)
+char	*ft_strtrim(char const *s)
 {
-	char			*res;
+	char			*result;
 	unsigned int	start;
 	unsigned int	size;
-	unsigned int	sp_count;
+	unsigned int	spaces_count;
 
 	if (!s)
 		return (NULL);
-	size = (unsigned int)ft_strlen(s);
-	sp_count = ft_strcfc((char*)s, "\t\n ");
-	start = sp_count;
-	if (size > sp_count)
-		sp_count += ft_strclc((char*)s, "\t\n ");
-	size -= sp_count;
-	if (!(res = ft_memalloc((size_t)size + 1)))
+	size = (unsigned int)ft_strlen((char*)s);
+	spaces_count = ft_strcntfirstchar((char*)s, " \n\t");
+	start = spaces_count;
+	if (size > spaces_count)
+		spaces_count += ft_strcntlastchar((char*)s, " \n\t");
+	size -= spaces_count;
+	if (!(result = ft_memalloc((size_t)size + 1)))
 		return (NULL);
-	res = ft_strncpy(result, (char*)s + start, size);
-	return (res);
+	result = ft_strncpy(result, (char*)s + start, size);
+	return (result);
 }

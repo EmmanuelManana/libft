@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcfc.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 17:20:34 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/05 12:32:19 by emanana          ###   ########.fr       */
+/*   Created: 2019/06/05 17:29:02 by emanana           #+#    #+#             */
+/*   Updated: 2019/06/05 17:31:14 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int		ft_strcfc(char *str, const char *c)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char			*p;
-	unsigned int	cnt;
-	int				ci;
-	unsigned int	tmp;
+	t_list	*new;
 
-	p = str;
-	cnt = 0;
-	while (*c)
+	if (lst)
 	{
-		ci = 0;
-		tmp = cnt;
-		while (c[ci])
-		{
-			if (c[ci++] == *p)
-				++cnt;
-		}
-		if (cnt == tmp)
-			return (cnt);
-		++p;
+		new = f(lst);
+		new->next = ft_lstmap(lst->next, f);
+		return (new);
 	}
-	return (cnt);
+	return (NULL);
 }

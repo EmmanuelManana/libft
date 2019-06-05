@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: vtouffet <vtouffet@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/23 11:47:57 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/05 13:10:36 by emanana          ###   ########.fr       */
+/*   Created: 2017/08/18 19:11:06 by vtouffet          #+#    #+#             */
+/*   Updated: 2017/11/06 13:37:59 by vtouffet         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char		*ft_strncat(char *s1, const char *s2, size_t n)
+char	*ft_strrev(char *str)
 {
-	size_t	i;
-	int		j;
+	int		count;
+	int		i;
+	char	c;
 
-	j = 0;
-	i = ft_strlen(s1);
-	while (s2[j] != '0' && (size_t)j <= n)
+	count = 0;
+	while (str[count] != '\0')
+		count++;
+	count = count - 1;
+	i = 0;
+	while (i < ((count + 1) / 2))
 	{
-		s1[i] = s2[j];
+		c = str[i];
+		str[i] = str[count - i];
+		str[count - i] = c;
 		i++;
-		++j;
 	}
-	s1[i] = '\0';
-	return (s1);
+	return (str);
 }

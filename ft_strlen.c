@@ -6,13 +6,13 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 10:06:50 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/04 17:21:03 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/05 12:37:07 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strlen(const char *str)
+size_t		ft_strlen(const char *str)
 {
 	int i;
 

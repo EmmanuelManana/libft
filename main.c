@@ -6,14 +6,14 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/20 09:52:25 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/04 18:02:02 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/05 14:21:01 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		main(int ac, char **av)
+int		main()
 {
-	ft_putstr(ft_strtrim("  helollklk lklkl			"));
+	puts(ft_strtrim("  helollklk lklkl			"));
 	return (0);
 }

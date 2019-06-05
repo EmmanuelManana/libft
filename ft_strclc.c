@@ -1,38 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcfc.c                                        :+:      :+:    :+:   */
+/*   ft_strclc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 17:20:34 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/05 12:32:19 by emanana          ###   ########.fr       */
+/*   Created: 2019/06/05 11:05:16 by emanana           #+#    #+#             */
+/*   Updated: 2019/06/05 12:18:45 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int		ft_strcfc(char *str, const char *c)
+unsigned int		ft_strclc(char *str, const char *c)
 {
-	char			*p;
+	int				c_i;
+	unsigned int	str_i;
 	unsigned int	cnt;
-	int				ci;
 	unsigned int	tmp;
 
-	p = str;
 	cnt = 0;
-	while (*c)
+	str_i = (unsigned int)ft_strlen(str) - 1;
+	while (str[str_i])
 	{
-		ci = 0;
+		c_i = 0;
 		tmp = cnt;
-		while (c[ci])
+		while (c[c_i])
 		{
-			if (c[ci++] == *p)
-				++cnt;
+			if (c[c_i] == str[str_i])
+				++cnt;	
 		}
 		if (cnt == tmp)
 			return (cnt);
-		++p;
+		--str_i;
 	}
 	return (cnt);
 }

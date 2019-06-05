@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcfc.c                                        :+:      :+:    :+:   */
+/*   ft_dup.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/04 17:20:34 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/05 12:32:19 by emanana          ###   ########.fr       */
+/*   Created: 2019/06/05 17:48:14 by emanana           #+#    #+#             */
+/*   Updated: 2019/06/05 17:53:16 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-unsigned int		ft_strcfc(char *str, const char *c)
+void	*ft_dup(void const *content, size_t content_size)
 {
-	char			*p;
-	unsigned int	cnt;
-	int				ci;
-	unsigned int	tmp;
+	unsigned char	*ptr;
+	unsigned char	*ptr2;
+	void			*new;
 
-	p = str;
-	cnt = 0;
-	while (*c)
-	{
-		ci = 0;
-		tmp = cnt;
-		while (c[ci])
-		{
-			if (c[ci++] == *p)
-				++cnt;
-		}
-		if (cnt == tmp)
-			return (cnt);
-		++p;
-	}
-	return (cnt);
+	if (!(new = ft_memalloc(content_size)))
+		return (NULL);
+	ptr = (unsigned char*)content;
+	ptr2 = (unsigned char*)new;
+	while (*ptr)
+		*(ptr2++) = *(ptr++);
+	return (new);
 }
