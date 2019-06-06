@@ -6,16 +6,16 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 16:22:23 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/05 13:09:42 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/06 11:28:30 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_memcmp(const void *s1, const void *s2, size_t n)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char		*ps1;
-	unsigned char		*ps2;
+	unsigned char			*ps1;
+	unsigned char			*ps2;
 	size_t					i;
 
 	i = 0;

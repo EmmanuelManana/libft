@@ -6,9 +6,10 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 17:48:14 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/05 17:53:16 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/06 11:26:48 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_dup(void const *content, size_t content_size)

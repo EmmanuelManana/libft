@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 17:26:26 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/31 14:33:43 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/06 11:50:13 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void		*ft_memset(void *b, int c, size_t len)
 	unsigned char *this;
 
 	this = (unsigned char*)b;
-	while (0 < len)
+	while (0 < len--)
 	{
-		*(this++) = (unsigned char)c;
-		len--;
+		*this = (unsigned char)c;
+		this++;
 	}
 	return (this);
 }

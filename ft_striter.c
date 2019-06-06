@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 12:20:59 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/31 14:31:28 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/06 11:42:52 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_striter(char *s, void (*f)(char *))
 {
 	if (!s || !f)
-		return;
+		return ;
 	while (*s)
 		f(s++);
 }

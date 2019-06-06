@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 11:08:14 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/05 12:30:19 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/06 11:26:12 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void		*ft_memalloc(size_t size)
 	void *mry;
 
 	if (!(mry = malloc(size)))
-			return (NULL);
+		return (NULL);
 	ft_bzero(mry, size);
 	return (mry);
 }
