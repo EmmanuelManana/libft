@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 14:38:16 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/31 15:55:22 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/06 15:04:25 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,4 @@ char		*ft_strmap(char const *s, char (*f)(char))
 	while (*src)
 		*(returned++) = f(*(src++));
 	return (returned);
-
 }

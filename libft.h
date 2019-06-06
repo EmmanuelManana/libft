@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:02:13 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/05 18:25:56 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/06 15:55:25 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void			ft_putnbr_fd(int nb, int fd);
 void			ft_putstr_fd(const char *str, int fd);
 int				ft_atoi_base(char* str, char *base);
 char			**ft_strsplitchrset(char *str, const char *charset);
-/*enter the bonus*/
+/*enter the bonus */
 typedef	struct s_list
 {
 	void			*content;

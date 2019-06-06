@@ -6,31 +6,31 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:46:45 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/04 16:49:03 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/06 15:53:31 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		cmp(const char *haystack, const char *needle)
-{
-	while (*haystack && *needle)
-	{
-		if (*haystack != *needle)
-			return (0);
-		haystack++;
-		needle++;
-	}
-	return (*needle == '\0');
-}
-
 char		*ft_strstr(const char *haystack, const char *needle)
 {
-	while (*haystack != '\0')
+	unsigned int h;
+	unsigned int n;
+
+	if (!*needle)
+		return ((char*)str);
+	pos = 0;
+	while (haystack[h] != '\0')
 	{
-		if (*haystack == *needle && cmp((char*)haystack,(char*)needle))
-			return ((char*)haystack);
-		haystack++;
+		if (haystack[h] == needle[0])
+		{
+			n = 1;
+			while (needle[n] != '\0' && haystack[h + n] == needle[n])
+				++n;
+			if (needle[n] == '\0')
+				return ((char*)&haystack[h]);
+		}
+		++h;
 	}
-	return (NULL);
+	return (0);
 }

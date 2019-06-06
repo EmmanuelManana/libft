@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 16:18:54 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/06 11:41:00 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/06 12:36:17 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void					*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
-	unsigned	char				*p_dst;
-	unsigned	char 				*p_src;
-	int								i;
+	unsigned char		*p_dst;
+	unsigned char		*p_src;
+	int					i;
 
 	i = 0;
 	p_dst = (unsigned char*)dst;
