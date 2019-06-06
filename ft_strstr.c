@@ -18,8 +18,8 @@ char		*ft_strstr(const char *haystack, const char *needle)
 	unsigned int n;
 
 	if (!*needle)
-		return ((char*)str);
-	pos = 0;
+		return ((char*)haystack);
+	h = 0;
 	while (haystack[h] != '\0')
 	{
 		if (haystack[h] == needle[0])
