@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:02:13 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/06 18:34:30 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/07 15:32:40 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,12 +68,13 @@ char		*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char		*ft_strtrim(char const *s);
 char		**ft_strsplit(char const *s, char c);
 char		*ft_itoa(int n);
+int			ft_islower(int c);
+int			ft_isupper(int c);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putendl(char const *s);
 void		ft_putendl_fd(char const *s, int fd);
 void		ft_putnbr_fd(int nb, int fd);
 void		ft_putstr_fd(const char *str, int fd);
-int			ft_atoi_base(char *str, char *base);
 char		**ft_strsplitchrset(char *str, const char *charset);
 unsigned int	ft_strcntfirstchar(char *str, const char *c);
 unsigned int	ft_strcntlastchar(char *str, const char *c);

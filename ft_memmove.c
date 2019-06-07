@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 17:18:01 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/07 09:55:36 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/07 14:15:45 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,20 +24,16 @@ void		*ft_memmove(void *dst, const void *src, size_t len)
 	if (dst == NULL && src == NULL)
 		return (NULL);
 	if (src > dst)
-	{
 		while (len > i)
 		{
 			d[i] = s[i];
 			i++;
 		}
-	}
 	if (src < dst)
-	{
 		while (i < len)
 		{
 			d[len - 1] = s[len - 1];
 			len--;
 		}
-	}
 	return (d);
 }
