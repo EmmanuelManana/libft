@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 09:59:18 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/01 14:51:12 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/07 10:14:23 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,16 @@
 
 char		*ft_strcat(char *s1, const char *s2)
 {
-	int i;
-	int j;
+	size_t i;
+	size_t j;
 
 	i = ft_strlen(s1);
 	j = 0;
-	while (s1[i] == '\0')
+	while (s2[j] != '\0')
 	{
-		s1[i] = s2[j];
-		i++;
-		++j;
+		s1[i + j] = s2[j];
+		j++;
 	}
-	s1[i] = '\0';
+	s1[i + j] = '\0';
 	return (s1);
 }

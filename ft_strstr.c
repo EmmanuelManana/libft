@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/24 09:46:45 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/06 17:04:10 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/07 11:30:12 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int			cmp(const char *haystack, const char *needle)
 
 char		*ft_strstr(const char *haystack, const char *needle)
 {
+	if (*needle == '\0' || needle == NULL)
+		return ((char*)haystack);
 	while (*haystack != '\0')
 	{
 		if (*haystack == *needle && cmp((char*)haystack, (char*)needle))

@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/23 16:04:03 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/24 14:52:15 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/07 11:20:30 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,18 @@
 
 char		*ft_strrchr(const char *s, int c)
 {
-	const char *res;
+	char	*l_pos;
 
-	res = 0;
+	l_pos = (0);
 	while (*s)
 	{
-		if (*s == (char)c)
-			res = s;
-		s++;
+		if (*s == c)
+			l_pos = (char*)s;
+		++s;
 	}
-	return ((char*)res);
+	if (l_pos)
+		return (l_pos);
+	if (c == '\0')
+		return ((char*)s);
+	return (0);
 }
