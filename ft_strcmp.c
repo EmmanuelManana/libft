@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 17:11:37 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/07 16:28:19 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/07 17:11:36 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ int		ft_strcmp(const char *s1, const char *s2)
 	unsigned int i;
 
 	i = 0;
-	if (!s1 || !s2)
-		return (1);
 	while ((s1[i] && s2[i]) && (s1[i] == s2[i]))
 	{
 		i++;

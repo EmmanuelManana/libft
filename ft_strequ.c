@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/01 09:43:58 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/07 16:28:00 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/07 17:13:23 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
+	if (!s1 || !s2)
+		return (-1);
 	return (ft_strcmp(s1, s2) ? 0 : 1);
 }
