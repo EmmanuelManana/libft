@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/22 16:45:28 by emanana           #+#    #+#             */
-/*   Updated: 2019/05/22 17:38:06 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/07 16:29:48 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr(char *str)
 	int i;
 
 	i = 0;
+	if (!str)
+		return ;
 	while (str[i] != '\0')
 	{
 		ft_putchar(str[i]);

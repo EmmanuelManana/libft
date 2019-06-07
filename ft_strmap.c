@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 14:38:16 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/07 14:39:14 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/07 16:11:50 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char		*ft_strmap(char const *s, char (*f)(char))
 	int		i;
 
 	i = 0;
-	if (!(res = ft_strnew(ft_strlen(s))))
-		return (NULL);
 	if (!s || !f)
+		return (NULL);
+	if (!(res = ft_strnew(ft_strlen(s))))
 		return (NULL);
 	while (s[i])
 	{

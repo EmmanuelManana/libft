@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/31 12:38:00 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/06 11:43:05 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/07 16:10:26 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void		ft_striteri(char *s, void (*f)(unsigned int, char *))
 	int i;
 
 	i = 0;
-	if (!*s || !s || !*f)
+	if (!s || !*f)
 		return ;
 	while (s[i])
 	{
