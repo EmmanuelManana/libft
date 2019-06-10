@@ -6,7 +6,7 @@
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/21 12:02:13 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/07 16:56:11 by emanana          ###   ########.fr       */
+/*   Updated: 2019/06/10 18:13:06 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,8 @@ void			ft_putendl_fd(char const *s, int fd);
 void			ft_putnbr_fd(int nb, int fd);
 void			ft_putstr_fd(const char *str, int fd);
 char			**ft_strsplitchrset(char *str, const char *charset);
-unsigned int	ft_strcntfirstchar(char *str, const char *c);
-unsigned int	ft_strcntlastchar(char *str, const char *c);
+unsigned int	ft_cntfirstchar(char *str, const char *c);
+unsigned int	ft_cntlastchar(char *str, const char *c);
 
 typedef	struct	s_list
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vtouffet <vtouffet@student.42.fr>          +#+  +:+       +#+        */
+/*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/08/19 15:49:42 by vtouffet          #+#    #+#             */
-/*   Updated: 2019/06/05 16:31:34 by emanana          ###   ########.fr       */
+/*   Created: 2019/06/10 18:12:50 by emanana           #+#    #+#             */
+/*   Updated: 2019/06/10 18:18:00 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ char	*ft_strtrim(char const *s)
 	if (!s)
 		return (NULL);
 	size = (unsigned int)ft_strlen((char*)s);
-	spaces_count = ft_strcntfirstchar((char*)s, " \n\t");
+	spaces_count = ft_cntfirstchar((char*)s, " \n\t");
 	start = spaces_count;
 	if (size > spaces_count)
-		spaces_count += ft_strcntlastchar((char*)s, " \n\t");
+		spaces_count += ft_cntlastchar((char*)s, " \n\t");
 	size -= spaces_count;
 	if (!(result = ft_memalloc((size_t)size + 1)))
 		return (NULL);

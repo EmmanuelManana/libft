@@ -1,22 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_cntlastchar.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: emanana <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/05 16:49:11 by emanana           #+#    #+#             */
-/*   Updated: 2019/06/10 18:22:11 by emanana          ###   ########.fr       */
+/*   Created: 2019/06/05 15:55:09 by emanana           #+#    #+#             */
+/*   Updated: 2019/06/10 18:10:40 by emanana          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(const char *str, int fd)
+unsigned int	ft_cntlastchar(char *str, const char *charset)
 {
-	while (str && *str)
+	unsigned int	i;
+	int				index;
+	unsigned int	count;
+	unsigned int	tmp;
+
+	count = 0;
+	i = (unsigned int)ft_strlen(str) - 1;
+	while (str[i])
 	{
-		ft_putchar_fd(*str, fd);
-		str++;
+		index = 0;
+		tmp = count;
+		while (charset[index])
+			if (charset[index++] == str[i])
+				++count;
+		if (count == tmp)
+			return (count);
+		--i;
 	}
+	return (count);
 }
