@@ -15,12 +15,14 @@
 void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
 	t_list	*node;
-	i(!(node = (t_list*)malloc(sizeof(t_list) * 1)))
-		return ;
+	t_list	*tmp;
+
 	node = *alst;
-	while (node->next)
+	while (node)
 	{
+		tmp = node;
 		ft_lstdelone(&node, del);
+		node = tmp->next;
 	}
 	*alst = NULL;
 }
